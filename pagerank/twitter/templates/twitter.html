@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block head %}
+    <title>Twitter Graph</title>
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.subject.label_tag }}
+        {{ form.subject }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
